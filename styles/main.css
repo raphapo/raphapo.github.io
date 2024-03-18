@@ -7,7 +7,15 @@ p {
 }
 
 .important {
-    color:crimson
+    color:black
+}
+
+.fun{
+    background-color: blue;
+}
+
+#funny{
+    font-size: larger;
 }
 
 body{
