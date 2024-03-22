@@ -11,6 +11,11 @@ body {
   
   h2 {
     font-size: 1.5em;
+    transition: 1s;
+    color:#999999;
+  }
+  h2:hover{
+    color:black;
   }
   
   .job-title {

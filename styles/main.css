@@ -6,9 +6,20 @@ body{
     background-color: rgb(46, 139, 108) ;
     color: white;
 }
+h1{
+    border-bottom: 5px solid white;
+}
 
-.important {
-    color:black;
+h1:hover{
+    font-size: xx-large;
+}
+.important:hover {
+    color:blue;
+    font-size: xx-large;
+}
+.important{
+    color :black;
+    transition: 1s;
 }
 
 .fun{
@@ -17,7 +28,7 @@ body{
 }
 
 ul{
- border: 5px solid purple;
+ border: 5px solid black;
  padding: 1em;
 }
 
