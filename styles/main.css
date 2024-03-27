@@ -48,10 +48,3 @@ a:hover {
 :hover > .show-hover{
     color: inherit;
 }
-.show-image {
-    display: none;
-    transition: 1s;
-}
-:hover > .show.image{
-    display: block;
-}
