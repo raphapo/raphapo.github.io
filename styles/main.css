@@ -1,4 +1,4 @@
-@keyframes pulse {
+@keyframes rainbow {
     0% {
         border-color: orangered;
         color: orangered;
@@ -58,7 +58,8 @@ body {
 
 h1 {
     border-bottom: 5px solid white;
-    animation: 10s pulse infinite;
+    animation: 10s rainbow infinite;
+
 }
 
 h1:hover {
@@ -105,13 +106,13 @@ a:hover {
 
 :hover>.show-hover {
     color: inherit;
-    animation: 5s pulse infinite;
+    animation: 5s rainbow infinite;
 }
 
 .leostyle {
     border: 5px solid whitesmoke;
     padding: 1em;
-    animation: 10s pulse infinite;
+    animation: 10s rainbow infinite;
 }
 
 .leostyle:hover {
@@ -120,6 +121,9 @@ a:hover {
     padding: 2em;
     color: black;
 
+}
+.pulse-size{
+    animation:5s pusle infinite;
 }
 @keyframes red-blue{
     0%{
@@ -138,3 +142,20 @@ a:hover {
         color:blue;
     }
 }
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(.9);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
