@@ -37,8 +37,8 @@
         color:violet;
     }
     90% {
-        border-color: pink;
-        color:pink;
+        border-color: rgb(255, 0, 149);
+        color:rgb(255, 0, 149);
     }
     100% {
         border-color: red;
@@ -51,13 +51,14 @@ p {
 }
 
 body {
-    background-color: rgb(46, 139, 108);
+    background-color: rgb(131, 210, 230);
     color: white;
     text-align: center;
 }
 
 h1 {
     border-bottom: 5px solid white;
+    animation: 10s pulse infinite;
 }
 
 h1:hover {
