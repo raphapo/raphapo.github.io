@@ -89,12 +89,13 @@ ul {
 
 a:link,
 a:visited {
-    color: #fb6542;
+    color: red;
 }
 
 a:hover {
     text-decoration: none;
     color: blue;
+    animation: 10s red-blue infinite;
 }
 
 .show-hover {
@@ -104,7 +105,7 @@ a:hover {
 
 :hover>.show-hover {
     color: inherit;
-    animation: 5s pulse ;
+    animation: 5s pulse infinite;
 }
 
 .leostyle {
@@ -119,4 +120,21 @@ a:hover {
     padding: 2em;
     color: black;
 
+}
+@keyframes red-blue{
+    0%{
+        color:blue;
+    }
+    25%{
+        color: violet;
+    }
+    50%{
+        color:red;
+    }
+    75%{
+        color:violet
+    }
+    100%{
+        color:blue;
+    }
 }
