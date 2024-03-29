@@ -1,64 +1,119 @@
-p { 
+@keyframes pulse {
+    0% {
+        border-color: red;
+        color: red;
+    }
+
+    10% {
+        border-color: orange;
+        color:orange;
+    }
+
+    20% {
+        border-color: yellow;
+        color: yellow;
+    }
+
+    40% {
+        border-color: yellowgreen;
+        color: yellowgreen;
+    }
+
+    50% {
+        border-color: lightseagreen;
+        color:lightseagreen;
+    }
+
+    60% {
+        border-color: blue;
+        color:blue;
+    }
+    70% {
+        border-color: blueviolet;
+        color:blueviolet;
+    }
+    80% {
+        border-color: violet;
+        color:violet;
+    }
+    90% {
+        border-color: pink;
+        color:pink;
+    }
+    100% {
+        border-color: red;
+        color:red;
+    }
+}
+
+p {
     color: white;
 }
 
-body{
-    background-color: rgb(46, 139, 108) ;
+body {
+    background-color: rgb(46, 139, 108);
     color: white;
-    text-align:center;
+    text-align: center;
 }
-h1{
+
+h1 {
     border-bottom: 5px solid white;
 }
 
-h1:hover{
+h1:hover {
     font-size: xx-large;
 }
+
 .important:hover {
-    color:blue;
+    color: blue;
     font-size: xx-large;
 }
-.important{
-    color :black;
+
+.important {
+    color: black;
     transition: 1s;
 }
 
-.fun{
+.fun {
     border: 5px solid blue;
-    padding: 1em;;
+    padding: 1em;
+    ;
 }
 
-ul{
- border: 5px solid black;
- padding: 1em;
+ul {
+    border: 5px solid black;
+    padding: 1em;
 }
 
-a:link, a:visited {
-  color: #fb6542;
+a:link,
+a:visited {
+    color: #fb6542;
 }
 
 a:hover {
-  text-decoration: none;
-  color: blue;
+    text-decoration: none;
+    color: blue;
 }
+
 .show-hover {
     color: transparent;
     transition: 1s;
 }
 
-:hover > .show-hover{
+:hover>.show-hover {
     color: inherit;
 }
 
-.leostyle{
-    border:5px solid whitesmoke;
+.leostyle {
+    border: 5px solid whitesmoke;
     padding: 1em;
-    transition: 1s;
+    animation: 10s pulse infinite;
 }
-.leostyle:hover{
+
+.leostyle:hover {
     font-size: xx-large;
     border: 10px solid blue;
     padding: 2em;
-    color:black;
+    color: black;
 
 }
