@@ -48,3 +48,15 @@ a:hover {
 :hover > .show-hover{
     color: inherit;
 }
+
+.leostyle{
+    border:5px solid whitesmoke;
+    padding: 1em;
+    transition: 1s;
+}
+.leostyle:hover{
+    font-size: x-large;
+    border: 10px solid blue;
+    padding: 2em;
+
+}
