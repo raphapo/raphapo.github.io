@@ -127,6 +127,14 @@ a:hover {
 .pulse-size{
     animation:5s pulse infinite;
 }
+.big{
+    color:black;
+    transition: 1s;
+}
+.big:hover{
+    font-size: xx-large;
+    color:blue;
+}
 
 
 
