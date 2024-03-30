@@ -147,13 +147,13 @@ a:hover {
       transform: scale(1);
     }
     25% {
-      transform: scale(.9);
+      transform: scale(.5);
     }
     50% {
       transform: scale(1);
     }
     75% {
-      transform: scale(1.1);
+      transform: scale(1.5);
     }
     100% {
       transform: scale(1);
