@@ -112,6 +112,7 @@ a:hover {
 .leostyle {
     border: 5px solid whitesmoke;
     padding: 1em;
+    transition: 1s;
     animation: 10s rainbow infinite;
 }
 
