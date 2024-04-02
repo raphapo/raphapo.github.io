@@ -93,6 +93,19 @@ h1:hover {
     Background-color: white;
     color:rgb(63, 63, 245);
     border-color: rgb(63, 63, 245);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.border{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    Background-color: white;
+    border-color: rgb(63, 63, 245);
+    Background-color: white;
+    border-width: 12x;
+    border-radius: 12px;
+    font-size:24px;
+    display:inline-block;
+    color:rgb(63, 63, 245)
 
 }
 
@@ -110,7 +123,7 @@ ul {
 
 a:link,
 a:visited {
-    color: red;
+    color: blue;
 }
 
 a:hover {
