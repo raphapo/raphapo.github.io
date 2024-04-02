@@ -108,7 +108,9 @@ h1:hover {
     color:rgb(63, 63, 245)
 
 }
-
+.tight-border{
+    display:inline-block;
+}
 
 .fun {
     border: 5px solid blue;
