@@ -76,6 +76,26 @@ h1:hover {
     color: black;
     transition: 1s;
 }
+.cool-button{
+    background-color: rgb(63, 63, 245);
+    border-radius: 12px;
+    color:white;
+    border-width: 12x;
+    font-size:24px;
+    border-color: rgb(63, 63, 245);
+    transition: 1s;
+    
+    
+    
+}
+.cool-button:hover{
+    font-size: 24px;
+    Background-color: white;
+    color:rgb(63, 63, 245);
+    border-color: rgb(63, 63, 245);
+
+}
+
 
 .fun {
     border: 5px solid blue;
