@@ -1,7 +1,26 @@
 /* Task 1: Hover Highlight Card */
-.hover-highlight-card {
-    padding: 20px;
+.hover-highlight-card{
+    background-color: rgb(63, 63, 245);
+    border-radius: 12px;
+    color:white;
+    border-width: 12x;
+    font-size:24px;
+    border-color: rgb(63, 63, 245);
+    display:inline-block;
+    transition: 1s;
+    
+    
+    
 }
+.hover-highlight-card:hover{
+    font-size: 24px;
+    Background-color: white;
+    color:rgb(63, 63, 245);
+    border-color: rgb(63, 63, 245);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    display:inline-block;
+}
+
 
 /* Task 2: Animated Navigation Menu */
 .animated-nav-menu ul {
