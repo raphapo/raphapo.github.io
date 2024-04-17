@@ -44,6 +44,7 @@
     animation: 0.5s nav-menu infinite;
 }
 /* Task 3: Button Press Animation */
+/* button spins when you click */
 .button-press-animation button {
     padding: 10px 20px;
     border: none;
@@ -60,6 +61,7 @@
 
 }
 /* Task 4: Simple Loading Spinner */
+/* spiner stops when you hover  */
 .simple-loading-spinner .spinner {
     border: 4px solid #f3f3f3;
     border-top: 4px solid #3498db;
