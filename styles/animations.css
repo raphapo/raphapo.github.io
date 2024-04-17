@@ -1,4 +1,5 @@
 /* Task 1: Hover Highlight Card */
+/* I used the box shadow only for the paragraph */
 .hover-highlight-card{
     background-color: rgb(63, 63, 245);
     border-radius: 12px;
@@ -36,8 +37,12 @@
     padding: 4px;
     color: #00aaff;
     background-color: white;
+    
+    
 }
-
+.animated-nav-menu a:hover{
+    animation: 0.5s nav-menu infinite;
+}
 /* Task 3: Button Press Animation */
 .button-press-animation button {
     padding: 10px 20px;
@@ -46,7 +51,14 @@
     color: white;
     cursor: pointer;
 }
+.button-press-animation button:active{
+    animation: 0.25s spiner 1;
+    transform: scale(0.8,0.8);
+    box-shadow: 5px 5px 5px grey;
+    
+    
 
+}
 /* Task 4: Simple Loading Spinner */
 .simple-loading-spinner .spinner {
     border: 4px solid #f3f3f3;
@@ -54,6 +66,10 @@
     border-radius: 50%;
     width: 40px;
     height: 40px;
+    animation: 1s spiner infinite;
+}
+.simple-loading-spinner .spinner:hover{
+    animation: 0s spiner ;
 }
 
 /* Task 5: Fading Gallery */
@@ -66,4 +82,34 @@
     width: 100px;
     height: 100px;
     object-fit: cover;
+    opacity: 0.5;
+    transition:0.5s;
+}
+.fading-gallery img:hover{
+    opacity: 1;
+    transform: scale(1.25);
+    box-shadow: 5px 5px 5px grey;
+}
+
+@keyframes nav-menu {
+    0%{
+        color:#00aaff;
+        background-color: red;
+    }
+    50%{
+        color: red;
+        background-color: blue;
+    }
+    100%{
+        color:#00aaff;
+        background-color: red;
+    }
+
+}
+
+@keyframes spiner{
+    from{transform:rotate(0deg);}
+
+    to{transform:rotate(360deg);}
+   
 }
