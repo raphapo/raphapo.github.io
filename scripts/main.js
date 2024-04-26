@@ -27,11 +27,14 @@ console.log(total);
 //task 5
 
 console.log("task 5")
-let fact = 1
-for(i=0;i<=10;i++){
-    fact=fact*i
-    console.log( fact*10)
-
+let fact = 1;
+let x= 10;
+for(i=0;i<(x+1);i++){
+    fact=(fact*i);
 }
+console.log( fact);
+    
+
+
 
 
