@@ -35,17 +35,32 @@ for (let i = 1; i < (x + 1); i++) {
 }
 
 //task 6
-console.log("task 6 ")
+console.log("task 6 ");
 let arr = [3, 1, 4, 2, 5];
 for(let i = 0; arr.length; i++){
-    console .log(arr[i])
+    console .log(arr[i]);
 
 }
 
 //task 7
 
-console.log("task 7")
+console.log("task 7");
+for (let i = 0; i < arr.length; i--){
+    console.log(arr.at(-1*i));
+}
 
+//task 8
+
+console.log("task 8");
+let cubes = [];
+for(let i = 0 ; i < 10; i ++){
+    cubes.push(i*i*i);
+}
+console.log(cubes)
+
+//task 9
+
+console.log("task 9")
 
 
 
