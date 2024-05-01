@@ -37,16 +37,16 @@ for (let i = 1; i < (x + 1); i++) {
 //task 6
 console.log("task 6 ");
 let arr = [3, 1, 4, 2, 5];
-for(let i = 0; arr.length; i++){
-    console .log(arr[i]);
+for(let i = 0; i < arr.length; i++){
+    console.log(arr[i]);
 
 }
 
 //task 7
 
 console.log("task 7");
-for (let i = 0; i < arr.length; i--){
-    console.log(arr.at(-1*i));
+for (let i = 0; i < arr.length; i++){
+    console.log(arr.at(-1*i-1));
 }
 
 //task 8
@@ -60,8 +60,16 @@ console.log(cubes)
 
 //task 9
 
-console.log("task 9")
+console.log("task 9");
+let fibo = [];
+ for(let i = 0; i <10 ; i++){
+    fibo.push(i+(i-1));
+ }
+ console.log(fibo)
 
+ //task 10
+
+ console.log("task 10")
 
 
 
