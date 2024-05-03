@@ -56,21 +56,24 @@ let cubes = [];
 for(let i = 0 ; i < 10; i ++){
     cubes.push(i*i*i);
 }
-console.log(cubes)
+console.log(cubes);
 
 //task 9
 
 console.log("task 9");
-let fibo = [];
- for(let i = 0; i <10 ; i++){
-    fibo.push(i+(i-1));
+let fibo = [0,1];
+ for(let i = 2; i <10 ; i++){
+    fibo.push(fibo.at(-1) + fibo.at(-2));
  }
- console.log(fibo)
+ console.log(fibo);
 
  //task 10
 
  console.log("task 10")
-
-
+ let newarr= [];
+ for(let i =0; i < arr.length; i ++){
+    newarr.push(arr.pop(-1*i-1));
+ }
+console.log(newarr);
 
 
