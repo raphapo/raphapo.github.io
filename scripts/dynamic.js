@@ -1,2 +1,12 @@
 let arrColor = ["blue", "black", "white", "green","yellow", "red"];
-console.log(arrColor);
+
+let ul = document.createElement("ul");
+
+for (let i = 0; i <arrColor.length; i++){
+    let li = document.createElement("li");
+    li.innerText = arrColor[i];
+    li.style.color = arrColor[i];
+    ul.appendChild(li);
+}
+
+document.body.appendChild(ul);
