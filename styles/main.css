@@ -202,3 +202,33 @@ a:hover {
     }
     
     }
+
+
+/* control panel code*/
+
+    /*background color*/
+
+#backgroud-blue:active{
+    background-color: blue;
+    transform: scale(0.8,0.8);
+}
+
+#backgroud-red:active{
+    background-color: red;
+    transform: scale(0.8,0.8);
+}
+#backgroud-white:active{
+    background-color: white;
+    transform: scale(0.8,0.8);
+}
+#backgroud-black:active{
+    background-color: black;
+    transform: scale(0.8,0.8);
+}
+
+    /*text color*/
+
+#textcolor-blue:active{
+    color:blue;
+    transform: scale(0.8,0.8);
+}
