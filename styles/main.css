@@ -232,3 +232,18 @@ a:hover {
     color:blue;
     transform: scale(0.8,0.8);
 }
+
+#textcolor-red:active{
+    color:red;
+    transform: scale(0.8,0.8);
+}
+
+#textcolor-white:active{
+    color:white;
+    transform: scale(0.8,0.8);
+}
+
+#textcolor-black:active{
+    color:black;
+    transform: scale(0.8,0.8);
+}
