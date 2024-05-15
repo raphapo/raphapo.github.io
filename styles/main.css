@@ -208,42 +208,120 @@ a:hover {
 
     /*background color*/
 
-#backgroud-blue:active{
-    background-color: blue;
-    transform: scale(0.8,0.8);
-}
-
-#backgroud-red:active{
-    background-color: red;
-    transform: scale(0.8,0.8);
-}
-#backgroud-white:active{
-    background-color: white;
-    transform: scale(0.8,0.8);
-}
-#backgroud-black:active{
-    background-color: black;
-    transform: scale(0.8,0.8);
-}
+    #backgroud-blue{
+        padding: 10px 20px;
+        border: none;
+        background-color: #00aaff;
+        color: white;
+        cursor: pointer;
+        display:inline-block;
+        transition: 0.5s;
+    }
+    #backgroud-blue:active{
+        transform: scale(0.8,0.8);
+        box-shadow: 5px 5px 5px grey;
+        background-color:blue;
+    }
+    #backgroud-red{
+        padding: 10px 20px;
+        border: none;
+        background-color: #00aaff;
+        color: white;
+        cursor: pointer;
+        display:inline-block; 
+        transition: 0.5s;
+    }
+    #backgroud-red:active{
+        transform: scale(0.8,0.8);
+        box-shadow: 5px 5px 5px grey;
+        background-color: red;
+    }
+    #backgroud-white{
+        padding: 10px 20px;
+        border: none;
+        background-color: #00aaff;
+        color: white;
+        cursor: pointer;
+        display:inline-block;
+        transition: 0.5s;
+    }
+    #backgroud-white:active{
+        transform: scale(0.8,0.8);
+        box-shadow: 5px 5px 5px grey;
+        background-color: white;
+        color:grey;
+    }
+    #backgroud-black{
+        padding: 10px 20px;
+        border: none;
+        background-color: #00aaff;
+        color: white;
+        cursor: pointer;
+        display:inline-block;
+        transition: 0.5s; 
+    }
+    #backgroud-black:active{
+        background-color: black;
+        transform: scale(0.8,0.8);
+        box-shadow: 5px 5px 5px grey;
+    }
 
     /*text color*/
 
-#textcolor-blue:active{
-    color:blue;
-    transform: scale(0.8,0.8);
-}
+    #textcolor-blue{
+        padding: 10px 20px;
+        border: none;
+        background-color: #00aaff;
+        color: white;
+        cursor: pointer;
+        display:inline-block;
+        transition: 0.5s; 
+    }
+    #textcolor-blue:active{
+        color:blue;
+        transform: scale(0.8,0.8);
+        box-shadow: 5px 5px 5px grey;
+    }
+    #textcolor-red{
+        padding: 10px 20px;
+        border: none;
+        background-color: #00aaff;
+        color: white;
+        cursor: pointer;
+        display:inline-block;
+        transition: 0.5s;
+    }
+    #textcolor-red:active{
+        color:red;
+        transform: scale(0.8,0.8);
+        box-shadow: 5px 5px 5px grey;
+    }
 
-#textcolor-red:active{
-    color:red;
-    transform: scale(0.8,0.8);
-}
-
-#textcolor-white:active{
-    color:white;
-    transform: scale(0.8,0.8);
-}
-
-#textcolor-black:active{
-    color:black;
-    transform: scale(0.8,0.8);
-}
+    #textcolor-white{
+        padding: 10px 20px;
+        border: none;
+        background-color: #00aaff;
+        color: white;
+        cursor: pointer;
+        display:inline-block;
+        transition: 0.5s; 
+    }
+    :active{
+        color:white;
+        transform: scale(0.8,0.8);
+        box-shadow: 5px 5px 5px grey;
+    }
+    #textcolor-black{
+        padding: 10px 20px;
+        border: none;
+        background-color: #00aaff;
+        color: white;
+        cursor: pointer;
+        display:inline-block;
+        transition: 0.5s; 
+    }
+    #textcolor-black:active{
+        color:black;
+        transform: scale(0.8,0.8);
+        box-shadow: 5px 5px 5px grey;
+    }
