@@ -6,7 +6,7 @@
 
     10% {
         border-color: orange;
-        color:orange;
+        color: orange;
     }
 
     20% {
@@ -21,28 +21,32 @@
 
     50% {
         border-color: lightseagreen;
-        color:lightseagreen;
+        color: lightseagreen;
     }
 
     60% {
         border-color: blue;
-        color:blue;
+        color: blue;
     }
+
     70% {
         border-color: blueviolet;
-        color:blueviolet;
+        color: blueviolet;
     }
+
     80% {
         border-color: violet;
-        color:violet;
+        color: violet;
     }
+
     90% {
         border-color: rgb(255, 0, 149);
-        color:rgb(255, 0, 149);
+        color: rgb(255, 0, 149);
     }
+
     100% {
         border-color: red;
-        color:red;
+        color: red;
     }
 }
 
@@ -69,47 +73,50 @@ h1:hover {
 .important:hover {
     color: blue;
     font-size: xx-large;
-    
+
 }
 
 .important {
     color: black;
     transition: 1s;
 }
-.cool-button{
+
+.cool-button {
     background-color: rgb(63, 63, 245);
     border-radius: 12px;
-    color:white;
+    color: white;
     border-width: 12x;
-    font-size:24px;
+    font-size: 24px;
     border-color: rgb(63, 63, 245);
     transition: 1s;
-    
-    
-    
-}
-.cool-button:hover{
-    font-size: 24px;
-    Background-color: white;
-    color:rgb(63, 63, 245);
-    border-color: rgb(63, 63, 245);
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+
 
 }
-.contact-box{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+.cool-button:hover {
+    font-size: 24px;
+    Background-color: white;
+    color: rgb(63, 63, 245);
+    border-color: rgb(63, 63, 245);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.contact-box {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     Background-color: white;
     border-color: rgb(63, 63, 245);
     Background-color: white;
     border-width: 12x;
     border-radius: 12px;
-    font-size:24px;
-    display:inline-block;
-    color:rgb(63, 63, 245)
-
+    font-size: 24px;
+    display: inline-block;
+    color: rgb(63, 63, 245)
 }
-.tight-border{
-    display:inline-block;
+
+.tight-border {
+    display: inline-block;
 }
 
 .fun {
@@ -159,169 +166,209 @@ a:hover {
 
 }
 
-.pulse-size{
-    animation:5s pulse infinite;
+.pulse-size {
+    animation: 5s pulse infinite;
 }
-.big{
-    color:black;
+
+.big {
+    color: black;
     transition: 1s;
 }
-.big:hover{
+
+.big:hover {
     font-size: xx-large;
-    color:blue;
+    color: blue;
+}
+
+.fake-h2{
+    font: 24px;
 }
 
 
 
-@keyframes red-blue{
-    0%{
-        color:blue;
+@keyframes red-blue {
+    0% {
+        color: blue;
     }
-    25%{
+
+    25% {
         color: violet;
     }
-    50%{
-        color:red;
+
+    50% {
+        color: red;
     }
-    75%{
-        color:violet
+
+    75% {
+        color: violet
     }
-    100%{
-        color:blue;
+
+    100% {
+        color: blue;
     }
 }
+
 @keyframes pulse {
     0% {
-      transform: scale(1);
-    }
-    50%{
-      transform: scale(1.25)
-    }
-    100%{
         transform: scale(1);
     }
-    
+
+    50% {
+        transform: scale(1.25)
     }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
 
 
 /* control panel code*/
 
-    /*background color*/
+/*background color*/
 
-    #backgroud-blue{
-        padding: 10px 20px;
-        border: none;
-        background-color: #00aaff;
-        color: white;
-        cursor: pointer;
-        display:inline-block;
-        transition: 0.5s;
-    }
-    #backgroud-blue:active{
-        transform: scale(0.8,0.8);
-        box-shadow: 5px 5px 5px grey;
-        background-color:blue;
-    }
-    #backgroud-red{
-        padding: 10px 20px;
-        border: none;
-        background-color: #00aaff;
-        color: white;
-        cursor: pointer;
-        display:inline-block; 
-        transition: 0.5s;
-    }
-    #backgroud-red:active{
-        transform: scale(0.8,0.8);
-        box-shadow: 5px 5px 5px grey;
-        background-color: red;
-    }
-    #backgroud-white{
-        padding: 10px 20px;
-        border: none;
-        background-color: #00aaff;
-        color: white;
-        cursor: pointer;
-        display:inline-block;
-        transition: 0.5s;
-    }
-    #backgroud-white:active{
-        transform: scale(0.8,0.8);
-        box-shadow: 5px 5px 5px grey;
-        background-color: white;
-        color:grey;
-    }
-    #backgroud-black{
-        padding: 10px 20px;
-        border: none;
-        background-color: #00aaff;
-        color: white;
-        cursor: pointer;
-        display:inline-block;
-        transition: 0.5s; 
-    }
-    #backgroud-black:active{
-        background-color: black;
-        transform: scale(0.8,0.8);
-        box-shadow: 5px 5px 5px grey;
-    }
+#background-original {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00aaff;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
+#background-original:active {
+    transform: scale(0.8, 0.8);
+    box-shadow: 5px 5px 5px grey;
+    background-color: rgb(131, 210, 230);
+}
+#background-blue {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00aaff;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
 
-    /*text color*/
+#background-blue:active {
+    transform: scale(0.8, 0.8);
+    box-shadow: 5px 5px 5px grey;
+    background-color: blue;
+}
 
-    #textcolor-blue{
-        padding: 10px 20px;
-        border: none;
-        background-color: #00aaff;
-        color: white;
-        cursor: pointer;
-        display:inline-block;
-        transition: 0.5s; 
-    }
-    #textcolor-blue:active{
-        color:blue;
-        transform: scale(0.8,0.8);
-        box-shadow: 5px 5px 5px grey;
-    }
-    #textcolor-red{
-        padding: 10px 20px;
-        border: none;
-        background-color: #00aaff;
-        color: white;
-        cursor: pointer;
-        display:inline-block;
-        transition: 0.5s;
-    }
-    #textcolor-red:active{
-        color:red;
-        transform: scale(0.8,0.8);
-        box-shadow: 5px 5px 5px grey;
-    }
+#background-red {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00aaff;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
 
-    #textcolor-white{
-        padding: 10px 20px;
-        border: none;
-        background-color: #00aaff;
-        color: white;
-        cursor: pointer;
-        display:inline-block;
-        transition: 0.5s; 
-    }
-    :active{
-        color:white;
-        transform: scale(0.8,0.8);
-        box-shadow: 5px 5px 5px grey;
-    }
-    #textcolor-black{
-        padding: 10px 20px;
-        border: none;
-        background-color: #00aaff;
-        color: white;
-        cursor: pointer;
-        display:inline-block;
-        transition: 0.5s; 
-    }
-    #textcolor-black:active{
-        color:black;
-        transform: scale(0.8,0.8);
-        box-shadow: 5px 5px 5px grey;
-    }
+#background-red:active {
+    transform: scale(0.8, 0.8);
+    box-shadow: 5px 5px 5px grey;
+    background-color: red;
+}
+
+#background-white {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00aaff;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+#background-white:active {
+    transform: scale(0.8, 0.8);
+    box-shadow: 5px 5px 5px grey;
+    background-color: white;
+    color: grey;
+}
+
+#background-black {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00aaff;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+#background-black:active {
+    background-color: black;
+    transform: scale(0.8, 0.8);
+    box-shadow: 5px 5px 5px grey;
+}
+
+/*text color*/
+
+#textcolor-blue {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00aaff;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+#textcolor-blue:active {
+    color: blue;
+    transform: scale(0.8, 0.8);
+    box-shadow: 5px 5px 5px grey;
+}
+
+#textcolor-red {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00aaff;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+#textcolor-red:active {
+    color: red;
+    transform: scale(0.8, 0.8);
+    box-shadow: 5px 5px 5px grey;
+}
+
+#textcolor-white {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00aaff;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+#textcolor-white:active {
+    color: white;
+    transform: scale(0.8, 0.8);
+    box-shadow: 5px 5px 5px grey;
+}
+
+#textcolor-black {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00aaff;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+#textcolor-black:active {
+    color: black;
+    transform: scale(0.8, 0.8);
+    box-shadow: 5px 5px 5px grey;
+}
