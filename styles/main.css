@@ -82,7 +82,7 @@ h1:hover {
 }
 
 .cool-button {
-    background-color: rgb(63, 63, 245);
+    background-color: blue;
     border-radius: 12px;
     color: white;
     border-width: 12x;
@@ -130,9 +130,11 @@ ul {
     padding: 1em;
 }
 
-a:link,
+a:link{
+    color: 	goldenrod;
+}
 a:visited {
-    color: blue;
+    color: grey;
 }
 
 a:hover {
@@ -372,3 +374,4 @@ a:hover {
     transform: scale(0.8, 0.8);
     box-shadow: 5px 5px 5px grey;
 }
+
