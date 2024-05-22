@@ -375,3 +375,17 @@ a:hover {
     box-shadow: 5px 5px 5px grey;
 }
 
+#danger-button{
+    border: 5px,5px,red;
+    background-color: black;
+    color:red;
+    display:inline-block;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition : 0.25s;
+}
+
+#danger-button:active{
+    transform: scale(0.8, 0.8);
+    box-shadow: 5px 5px 5px rgb(53, 52, 52) ;
+}
