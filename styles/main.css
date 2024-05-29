@@ -82,26 +82,26 @@ h1:hover {
 }
 
 .cool-button {
-    background-color: blue;
-    border-radius: 12px;
+    
+    width: 10em;
+    height: 5ex;
+    background-image: linear-gradient(140deg, black 40%, green);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
     color: white;
-    border-width: 12x;
-    font-size: 24px;
-    border-color: rgb(63, 63, 245);
-    transition: 1s;
+    padding:5px;
+    cursor: pointer;
+    display:inline;
+    
 
 
 
 }
-
-.cool-button:hover {
-    font-size: 24px;
-    Background-color: white;
-    color: rgb(63, 63, 245);
-    border-color: rgb(63, 63, 245);
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-
-}
+.cool-button:active {
+    box-shadow: 2px 2px 5px green;
+    transform:scale(0.85, 0.85)
+  }
 
 .contact-box {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
@@ -388,4 +388,9 @@ a:hover {
 #danger-button:active{
     transform: scale(0.8, 0.8);
     box-shadow: 5px 5px 5px rgb(53, 52, 52) ;
+}
+
+.image:hover{
+
+    transform: scale(1.25, 1.25);
 }
