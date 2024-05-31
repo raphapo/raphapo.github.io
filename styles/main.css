@@ -60,6 +60,10 @@ body {
     text-align: center;
 }
 
+body * {
+    animation-play-state: inherit !important;
+}
+
 h1 {
     border-bottom: 5px solid white;
     animation: 10s rainbow infinite;
@@ -117,6 +121,7 @@ h1:hover {
 
 .tight-border {
     display: inline-block;
+    border: 1 px;
 }
 
 .fun {

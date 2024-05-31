@@ -93,12 +93,20 @@
       document.body.style.backgroundColor = color;
     }
     
+    function crashComputer() { 
+      // debugger;
+      if (document.body.style.animationPlayState == "paused"){
 
+        document.body.style.animationPlayState = "running";
+      } else{
+      document.body.style.animationPlayState = "paused";
+      }
+    }
     
   </script>
 
   <div >
-    <p id="danger-button" onclick="">DANGER, DO NOT CLICK!</p>
+    <p id="danger-button" onclick="crashComputer()">PAUSE/PLAY ANIMATION! </p>
   </div>
 
 
