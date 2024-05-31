@@ -242,7 +242,7 @@ a:hover {
     color: white;
     cursor: pointer;
     display: inline-block;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 #background-original:active {
     transform: scale(0.8, 0.8);
@@ -256,7 +256,7 @@ a:hover {
     color: white;
     cursor: pointer;
     display: inline-block;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 #background-blue:active {
@@ -272,7 +272,7 @@ a:hover {
     color: white;
     cursor: pointer;
     display: inline-block;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 #background-red:active {
@@ -288,7 +288,7 @@ a:hover {
     color: white;
     cursor: pointer;
     display: inline-block;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 #background-white:active {
@@ -305,7 +305,7 @@ a:hover {
     color: white;
     cursor: pointer;
     display: inline-block;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 #background-black:active {
@@ -323,7 +323,7 @@ a:hover {
     color: white;
     cursor: pointer;
     display: inline-block;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 #textcolor-blue:active {
@@ -339,7 +339,7 @@ a:hover {
     color: white;
     cursor: pointer;
     display: inline-block;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 #textcolor-red:active {
@@ -355,7 +355,7 @@ a:hover {
     color: white;
     cursor: pointer;
     display: inline-block;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 #textcolor-white:active {
@@ -371,7 +371,7 @@ a:hover {
     color: white;
     cursor: pointer;
     display: inline-block;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 #textcolor-black:active {
