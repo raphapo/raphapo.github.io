@@ -59,7 +59,6 @@ body {
     color: white;
     text-align: center;
 }
-
 body * {
     animation-play-state: inherit !important;
 }
@@ -69,7 +68,6 @@ h1 {
     animation: 10s rainbow infinite;
 
 }
-
 h1:hover {
     font-size: xx-large;
 }
@@ -79,7 +77,6 @@ h1:hover {
     font-size: xx-large;
 
 }
-
 .important {
     color: black;
     transition: 1s;
@@ -105,7 +102,7 @@ h1:hover {
 .cool-button:active {
     box-shadow: 2px 2px 5px green;
     transform:scale(0.85, 0.85)
-  }
+}
 
 .contact-box {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
@@ -141,7 +138,6 @@ a:link{
 a:visited {
     color: grey;
 }
-
 a:hover {
     text-decoration: none;
     color: blue;
@@ -152,7 +148,6 @@ a:hover {
     color: transparent;
     transition: 1s;
 }
-
 :hover>.show-hover {
     color: inherit;
     animation: 5s rainbow infinite;
@@ -164,7 +159,6 @@ a:hover {
     transition: 1s;
     animation: 10s rainbow infinite;
 }
-
 .leostyle:hover {
     font-size: xx-large;
     border: 10px solid blue;
@@ -181,7 +175,6 @@ a:hover {
     color: black;
     transition: 1s;
 }
-
 .big:hover {
     font-size: xx-large;
     color: blue;
@@ -214,7 +207,6 @@ a:hover {
         color: blue;
     }
 }
-
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -258,13 +250,11 @@ a:hover {
     display: inline-block;
     transition: 0.25s;
 }
-
 #background-blue:active {
     transform: scale(0.8, 0.8);
     box-shadow: 5px 5px 5px grey;
     background-color: blue;
 }
-
 #background-red {
     padding: 10px 20px;
     border: none;
@@ -274,13 +264,11 @@ a:hover {
     display: inline-block;
     transition: 0.25s;
 }
-
 #background-red:active {
     transform: scale(0.8, 0.8);
     box-shadow: 5px 5px 5px grey;
     background-color: red;
 }
-
 #background-white {
     padding: 10px 20px;
     border: none;
@@ -290,14 +278,12 @@ a:hover {
     display: inline-block;
     transition: 0.25s;
 }
-
 #background-white:active {
     transform: scale(0.8, 0.8);
     box-shadow: 5px 5px 5px grey;
     background-color: white;
     color: grey;
 }
-
 #background-black {
     padding: 10px 20px;
     border: none;
@@ -307,7 +293,6 @@ a:hover {
     display: inline-block;
     transition: 0.25s;
 }
-
 #background-black:active {
     background-color: black;
     transform: scale(0.8, 0.8);
@@ -325,13 +310,11 @@ a:hover {
     display: inline-block;
     transition: 0.25s;
 }
-
 #textcolor-blue:active {
     color: blue;
     transform: scale(0.8, 0.8);
     box-shadow: 5px 5px 5px grey;
 }
-
 #textcolor-red {
     padding: 10px 20px;
     border: none;
@@ -341,13 +324,11 @@ a:hover {
     display: inline-block;
     transition: 0.25s;
 }
-
 #textcolor-red:active {
     color: red;
     transform: scale(0.8, 0.8);
     box-shadow: 5px 5px 5px grey;
 }
-
 #textcolor-white {
     padding: 10px 20px;
     border: none;
@@ -357,13 +338,11 @@ a:hover {
     display: inline-block;
     transition: 0.25s;
 }
-
 #textcolor-white:active {
     color: white;
     transform: scale(0.8, 0.8);
     box-shadow: 5px 5px 5px grey;
 }
-
 #textcolor-black {
     padding: 10px 20px;
     border: none;
@@ -373,7 +352,6 @@ a:hover {
     display: inline-block;
     transition: 0.25s;
 }
-
 #textcolor-black:active {
     color: black;
     transform: scale(0.8, 0.8);
@@ -389,7 +367,6 @@ a:hover {
     padding: 10px 20px;
     transition : 0.125s;
 }
-
 #danger-button:active{
     transform: scale(0.8, 0.8);
     box-shadow: 5px 5px 5px rgb(53, 52, 52) ;
@@ -399,7 +376,6 @@ a:hover {
     transition:1s;
 
 }
-
 .image:hover{
     transform: scale(0.8 , 0.8);
 }
