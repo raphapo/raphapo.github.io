@@ -443,13 +443,15 @@ header {
   font-size: 1.1rem;
   padding: 0.5rem 1.2rem;
   border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
+  transition: transform 0.18s;
   letter-spacing: 0.5px;
+  background: none;
 }
 
 .navbar a:hover {
-  background: var(--accent);
-  color: var(--white);
+  background: none;
+  color: var(--white);      /* Keep the color the same on hover */
+  transform: scale(1.2);   /* Enlarge on hover */
 }
 
 main {
