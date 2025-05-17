@@ -1,66 +1,15 @@
-@keyframes rainbow {
-    0% {
-        border-color: orangered;
-        color: orangered;
-    }
-
-    10% {
-        border-color: orange;
-        color: orange;
-    }
-
-    20% {
-        border-color: yellow;
-        color: yellow;
-    }
-
-    40% {
-        border-color: yellowgreen;
-        color: yellowgreen;
-    }
-
-    50% {
-        border-color: lightseagreen;
-        color: lightseagreen;
-    }
-
-    60% {
-        border-color: blue;
-        color: blue;
-    }
-
-    70% {
-        border-color: blueviolet;
-        color: blueviolet;
-    }
-
-    80% {
-        border-color: violet;
-        color: violet;
-    }
-
-    90% {
-        border-color: rgb(255, 0, 149);
-        color: rgb(255, 0, 149);
-    }
-
-    100% {
-        border-color: red;
-        color: red;
-    }
-}
-
 p {
     color: white;
 }
 
 body {
     background-color: rgb(131, 210, 230);
-    color: white;
+    color: var(--text);
     text-align: center;
-}
-body * {
-    animation-play-state: inherit !important;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
 }
 
 h1 {
@@ -93,10 +42,7 @@ h1:hover {
     padding:5px;
     cursor: pointer;
     display:inline;
-    
-
-
-
+    transition: box-shadow 0.2s, transform 0.2s;
 }
 .cool-button:active {
     box-shadow: 2px 2px 5px green;
@@ -105,10 +51,9 @@ h1:hover {
 
 .contact-box {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    Background-color: white;
+    background-color: white;
     border-color: rgb(63, 63, 245);
-    Background-color: white;
-    border-width: 12x;
+    border-width: 12px;
     border-radius: 12px;
     font-size: 24px;
     display: inline-block;
@@ -117,7 +62,7 @@ h1:hover {
 
 .tight-border {
     display: inline-block;
-    border: 1 px;
+    border: 1px;
 }
 
 .fun {
@@ -132,42 +77,45 @@ ul {
 }
 
 a:link{
-    color: 	goldenrod;
+    color: goldenrod;
+    text-decoration: none;
 }
 a:visited {
     color: grey;
+    text-decoration: none;
 }
 a:hover {
     text-decoration: none;
     color: blue;
-    animation: 10s red-blue infinite;
+    /* animation: 10s red-blue infinite; */ /* Removed rainbow animation */
 }
 
+/* Remove .show-hover animation */
 .show-hover {
     color: transparent;
     transition: 1s;
 }
 :hover>.show-hover {
     color: inherit;
-    animation: 5s rainbow infinite;
+    /* animation: 5s rainbow infinite; */ /* Removed */
 }
 
+/* Remove .leostyle animation */
 .leostyle {
     border: 5px solid whitesmoke;
     padding: 1em;
     transition: 1s;
-    animation: 10s rainbow infinite;
+    /* animation: 10s rainbow infinite; */ /* Removed */
 }
 .leostyle:hover {
     font-size: xx-large;
     border: 10px solid blue;
     padding: 2em;
     color: black;
-
 }
 
 .pulse-size {
-    animation: 5s pulse infinite;
+    /* animation: 5s pulse infinite; */ /* Not rainbow, but remove if not used */
 }
 
 .big {
@@ -426,9 +374,11 @@ header {
   justify-content: center;
   gap: 2.5rem;
   list-style: none;
-  background: transparent;
-  padding: 0;
+  background: var(--white);
+  padding: 0.8rem 0;
   margin: 0 0 1.8rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.06);
 }
 
 .navbar li {
@@ -437,21 +387,22 @@ header {
 }
 
 .navbar a {
-  color: var(--white);
+  color: var(--text);
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
   padding: 0.5rem 1.2rem;
   border-radius: 4px;
-  transition: transform 0.18s;
+  transition: transform 0.18s, color 0.18s;
   letter-spacing: 0.5px;
   background: none;
 }
 
 .navbar a:hover {
   background: none;
-  color: var(--white);      /* Keep the color the same on hover */
-  transform: scale(1.2);   /* Enlarge on hover */
+  color: var(--accent);
+  transform: scale(1.2);
+  text-decoration: none;
 }
 
 main {
