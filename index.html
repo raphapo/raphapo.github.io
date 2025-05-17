@@ -4,126 +4,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raphael's website</title>
+  <title>Raphael's Architecture Portfolio</title>
   <link href="styles/main.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-
 </head>
 
 <body>
+  <header>
+    <nav>
+      <ul class="navbar">  
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/about">About</a></li> 
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <h1 class="site-title">Raphael's Architecture Portfolio</h1>
+    <p class="site-subtitle">Designing spaces for a better tomorrow</p>
+  </header>
 
-  <h1 class="important">Welcome to Raphael's Architerture Porfolio </h1>
-  
+  <main>
+    <section class="portfolio-gallery">
+      <h2>Featured Projects</h2>
+      <div class="gallery-row">
+        <div class="gallery-item">
+          <a href="/projects/project1.html">
+            <img src="images/project1.jpg" alt="Modern House Design">
+            <div class="gallery-caption">
+              <h3>Modern House</h3>
+              <p>A sleek, modern home with sustainable materials.</p>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/projects/project2.html">
+            <img src="images/project2.jpg" alt="Urban Park Concept">
+            <div class="gallery-caption">
+              <h3>Urban Park</h3>
+              <p>Green spaces for city living and community events.</p>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/projects/project3.html">
+            <img src="images/project3.jpg" alt="Bridge Structure">
+            <div class="gallery-caption">
+              <h3>Bridge Structure</h3>
+              <p>Innovative bridge design blending form and function.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <ul class="navbar">  
-    <li><a href="/">Home</a></li>
-    <li><a href="/projects">Projects</a></li>
-    <li><a href="/about">About</a></li> 
-  </ul>
-  
+    <section class="about-section">
+      <h2>About Me</h2>
+      <p>
+        I am Raphael, an aspiring architect passionate about creating functional and beautiful spaces. My portfolio showcases a range of projects, from residential homes to public parks and infrastructure. I believe in sustainable design and thoughtful details that enhance everyday life.
+      </p>
+    </section>
 
+    <section class="contact-section">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:raphael.architecture@email.com">raphael.architecture@email.com</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/raphael-architecture" target="_blank">linkedin.com/in/raphael-architecture</a></li>
+      </ul>
+    </section>
+  </main>
 
-  <h2 class="important">My website is better than Brayden's
-    <span class="show-hover">, really better!</span>
-  </h2>
-
-  <h3 class="pulse-size">Reasons:</h3>
-  <ul class="tight-border">
-    <li>Im just better than him at so many things, like making websites</li>
-    <li>Brayden is not the best </li>
-    <li>My website just looks <strong>better</strong> !</li>
-    <li>Here is a link to his <a href="https://bananasandcheeese.github.io//"> website</a>,it sucks</li>
-  </ul>
-
-  <h2>Things I like to do:</h2>
-  <ol class="tight-border">
-    <li>Rock climbing</li>
-    <li>Playing <em>Fortnite</em>!</li>
-    <li>Montain biking</li>
-    <li>playing clash royale</li>
-  </ol>
-
-  <h2>Games you can play:</h2>
-  <p class="important">Play <a href="https://www.supercell.com"> Clash Royale </a> now!</p>
-  <p class="important">Play <a href="https://www.fortnite.com"> Fortnite</a> now!</p>
-  <a class="cool-button"  href="/games.html">Free games on this page</a>
-  <a class="cool-button" href="/videos.html">Cool videos</a>
-  
-  <div style="text-align:center;">
-
-    <img class="image " src="images/clashroyale.jpeg" alt="here is a picture of clash royale" style="width: 300px ; height:auto;">
-
-  </div>
-
-
-  <a class="cool-button" href="/about.html">BIO</a>
-
-
-
-  <a class="cool-button" href="/leo.html"> LEO Website</a>
-
-
-
-  <h1> This the control panel, change anything on the website with these buttons. </h1>
-
-  <div>
-    <div class="fake-h2">background color :</div>
-    <p id="background-blue" onclick="changeBackgroundColor('blue')">Blue</p>
-    <p id="background-red" onclick="changeBackgroundColor('red')">Red</p>
-    <p id="background-white" onclick="changeBackgroundColor('white')">White</p>
-    <p id="background-black" onclick="changeBackgroundColor('black')">Black</p>
-    <p id="background-original" onclick="changeBackgroundColor('rgb(131, 210, 230)')">Original</p>
-  </div>
-
-  <div>
-    <div class="fake-h2">text color </div>
-    <p id="textcolor-blue" onclick="changeTextColor('blue')">Blue</p>
-    <p id="textcolor-red" onclick="changeTextColor('red')">Red</p>
-    <p id="textcolor-white" onclick="changeTextColor('white')">White</p>
-    <p id="textcolor-black" onclick="changeTextColor('black')">Black</p>
-
-  </div>
-
-  <!-- make a heading class for the div -->
-
-
- <script>
-    function changeTextColor(color) {
-      document.body.style.color = color;
-    }
-    function changeBackgroundColor(color) {
-      document.body.style.backgroundColor = color;
-    }
-    
-    function crashComputer() { 
-      // debugger;
-      if (document.body.style.animationPlayState == "paused"){
-
-        document.body.style.animationPlayState = "running";
-      } else{
-      document.body.style.animationPlayState = "paused";
-      }
-    }
-    
-  </script>
-
-  <div >
-    <p id="danger-button" onclick="crashComputer()">PAUSE/PLAY ANIMATION! </p>
-  </div>
-
-
-
-
-
-  <h2>
-    <em>Social and Contact information</em>
-  </h2>
-  <ul class="contact-box">
-    <li>Email: <a href="mrbeast@gmail.com">mrbeast@gmail.com</a></li>
-    <li>Web: <a href="https://bananasandcheeese.github.io">Braiden's website</a></li>
-    <li>Tel: +1(666)-420-6969</li>
-  </ul>
-
-  </body>
-
+  <footer>
+    <p>&copy; 2025 Raphael's Architecture Portfolio</p>
+  </footer>
+</body>
 </html>
