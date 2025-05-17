@@ -379,3 +379,31 @@ a:hover {
 .image:hover{
     transform: scale(0.8 , 0.8);
 }
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0.5rem 1rem;
+  background: #1e90ff;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.navbar li {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a, .navbar li {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.navbar a:hover, .navbar li:hover {
+  color: #ffd700;
+}
