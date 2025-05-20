@@ -1,0 +1,57 @@
+.navBar{
+
+    background-color: black;
+    color: greenyellow;
+    border-color: rgb(255, 255, 255);
+    border-width: 10px;
+
+}
+body{
+    background: black;
+    color: rgb(74, 230, 43);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    background-color: rgb(74, 230, 43);
+    color: black;
+    border: 2px solid white;
+    border-radius: 5px;
+    
+}
+button:active{
+   transform:scale(0.95); 
+   box-shadow: 5px 5px 5px rgb(65, 58, 58);
+}
+button:hover{
+    animation:epileplsy 1s forwards infinite;
+   
+}
+@keyframes epileply {
+    0%{
+        color:rgb(74, 230, 43);
+        transform: rotate(0deg);
+    }
+    25%{
+        color:blue;
+        transform: rotate(90deg)
+    }
+    50%{
+       color:purple;
+       transform: rotate(180deg) 
+    }
+    75%{
+        color:red;
+        transform: rotate(270deg) 
+    }
+    100%{
+        color:yellow;
+        transform: rotate(360deg);
+    }
+}
+.ulbox{
+    border: 2px solid white;
+    border-radius: 5px;
+    
+}
