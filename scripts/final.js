@@ -11,4 +11,10 @@ function resetBrightness(newBrightness){
     elem.style.filter = `brightness(${brightness})`;
 
 }
+function showPopup() {
+    document.getElementById('popup').style.display = 'block';
+}
+function hidePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
 

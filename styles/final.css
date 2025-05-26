@@ -69,3 +69,13 @@ button:active{
 .darkconcrete{
    filter :brightness(10) ;
 }
+#popup{
+    display:none; 
+    position:fixed; 
+    top:30%; 
+    left:40%;
+     background:white; 
+     border:1px solid #333; 
+     padding:20px; 
+     z-index:1000;
+}
