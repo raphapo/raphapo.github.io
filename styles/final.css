@@ -91,3 +91,23 @@ button:disabled{
     font-size:2em;
     margin: 20px;
 }
+.leaderboard-table {
+  width: 300px;
+  border-collapse: collapse;
+  margin: 0 auto 1em auto;
+  background: black;
+  color: white;
+  font-size: 1.1em;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  border: 2px solid white;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.leaderboard-table th {
+  background: #222;
+  color: #fff;
+}

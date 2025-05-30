@@ -2,6 +2,10 @@ let brightness = 0.5;
 let stopwatchInterval = null;
 let stopwatchStartTime = null;
 
+// Store logged-in user
+let loggedInUser = null;
+let highestTime = 0; // in milliseconds
+
 function updateStopwatch() {
     if (!stopwatchStartTime) return;
     const now = Date.now();
@@ -19,25 +23,21 @@ function startStopwatch() {
     updateStopwatch();
 }
 
-function changeBrightness(newBrightness){
-    brightness +=1;
+function changeBrightness() {
+    brightness += 1;
     const elem = document.getElementById("concrete1");
-    elem.style.filter = `brightness(${brightness})`;
+    if (elem) elem.style.filter = `brightness(${brightness})`;
     startStopwatch();
     // Disable the button after first click
     const btn = document.querySelector('button[onclick="changeBrightness()"]');
     if (btn) btn.setAttribute('disabled', 'disabled');
 }
-function resetBrightness(newBrightness){
-    brightness =0.5;
+
+function resetBrightness() {
+    brightness = 0.5;
     const elem = document.getElementById("concrete1");
-    elem.style.filter = `brightness(${brightness})`;
-
+    if (elem) elem.style.filter = `brightness(${brightness})`;
 }
-
-// Store logged-in user
-let loggedInUser = null;
-let highestTime = 0; // in milliseconds
 
 function showPopup() {
     document.getElementById('popup').style.display = 'block';
@@ -46,27 +46,51 @@ function hidePopup() {
     document.getElementById('popup').style.display = 'none';
 }
 
+// Helper to get users array from localStorage
+function getUsers() {
+    const users = localStorage.getItem('users');
+    return users ? JSON.parse(users) : [];
+}
+
+// Helper to save users array to localStorage
+function saveUsers(users) {
+    localStorage.setItem('users', JSON.stringify(users));
+}
+
+// Login user function
+function loginUser(username) {
+    let users = getUsers();
+    let user = users.find(u => u.username === username);
+    if (!user) {
+        user = { username, highestTime: 0 };
+        users.push(user);
+        saveUsers(users);
+    }
+    loggedInUser = username;
+    highestTime = user.highestTime;
+    updateLeaderboardUser();
+}
+
 // Display the logged-in user and their highest time under the leaderboard
 function updateLeaderboardUser() {
     const userDiv = document.getElementById('leaderboard-user');
     const tableBody = document.querySelector('#leaderboard-table tbody');
     if (userDiv) {
         if (loggedInUser) {
-            const time = new Date(highestTime).toISOString().substr(11, 8);
-            userDiv.textContent = `Logged in as: ${loggedInUser} | Highest Time: ${time}`;
-            // Update table
-            if (tableBody) {
-                tableBody.innerHTML = `
-                  <tr>
-                    <td>${loggedInUser}</td>
-                    <td>${time}</td>
-                  </tr>
-                `;
-            }
+            userDiv.textContent = `Logged in as: ${loggedInUser}`;
         } else {
             userDiv.textContent = '';
-            if (tableBody) tableBody.innerHTML = '';
         }
+    }
+    // Show all users in the table, sorted by highest time
+    if (tableBody) {
+        const users = getUsers().sort((a, b) => b.highestTime - a.highestTime);
+        tableBody.innerHTML = users.map(u => `
+            <tr>
+                <td>${u.username}</td>
+                <td>${new Date(u.highestTime).toISOString().substr(11, 8)}</td>
+            </tr>
+        `).join('');
     }
 }
 
@@ -77,31 +101,15 @@ function updateHighestTime() {
     const elapsed = now - stopwatchStartTime;
     if (elapsed > highestTime) {
         highestTime = elapsed;
+        // Update user in users array
+        let users = getUsers();
+        let user = users.find(u => u.username === loggedInUser);
+        if (user) {
+            user.highestTime = highestTime;
+            saveUsers(users);
+        }
         updateLeaderboardUser();
     }
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Show popup immediately when the page loads
-    showPopup();
-
-    const popupForm = document.querySelector('#popup form');
-    if (popupForm) {
-        popupForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const username = document.getElementById('username').value;
-            loggedInUser = username;
-            highestTime = 0; // Reset for new user
-            hidePopup();
-            updateLeaderboardUser();
-        });
-    }
-    updateLeaderboardUser(); // Show on page load if already set
-});
-
-// Example: function to check if user is logged in
-function isUserLoggedIn() {
-    return loggedInUser !== null;
 }
 
 // Stop the stopwatch and update highest time when needed
@@ -113,6 +121,24 @@ function stopStopwatch() {
     }
 }
 
-// Optionally, call stopStopwatch() when you want to stop timing
-// For example, you could add a "Stop" button and call stopStopwatch() on click
+// Example: function to check if user is logged in
+function isUserLoggedIn() {
+    return loggedInUser !== null;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    showPopup();
+
+    const popupForm = document.querySelector('#popup form');
+    if (popupForm) {
+        popupForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            if (!username.trim()) return alert("Please enter a username.");
+            loginUser(username);
+            hidePopup();
+        });
+    }
+    updateLeaderboardUser();
+});
 
