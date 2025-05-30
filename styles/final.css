@@ -75,15 +75,17 @@ button:disabled{
 .darkconcrete{
    filter :brightness(10) ;
 }
-#popup{
-    display:none; 
-    position:fixed; 
-    top:30%; 
-    left:40%;
-     background:white; 
-     border:1px solid #333; 
-     padding:20px; 
-     z-index:1000;
+#popup {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  background: white;
+  border: 1px solid #333;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
 }
 .stopwatch{
     font-size:2em;

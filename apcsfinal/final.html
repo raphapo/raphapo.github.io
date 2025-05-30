@@ -8,12 +8,26 @@
 <body>
     <h1 class="navBar">Welcome To drying Concrete simulator</h1>
     <h2 class="ui">This game will test your patience and your will to live</h2>
+    <div id="leaderboard-user"></div>
     <div id="stopwatch" class="stopwatch">00:00:00</div>
     <button onclick="changeBrightness()">Start Concrete simulation</button>
+    <button onclick="stopStopwatch()" id="stop-btn">Stop Simulation</button>
     <div class="wetconcrete" >
         <img id="concrete1" class="wetconcrete" src="/images/darkConcrete.jpg"></img>
     </div>
     <h2>Leaderboard</h2>
+    <div id="leaderboard-user"></div>
+    <table id="leaderboard-table" class="leaderboard-table" style="margin-bottom: 1em;">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Highest Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Filled by JS -->
+      </tbody>
+    </table>
     <h2>Benefits</h2>
     <ul class="ulbox">
         <li>Improves your patience</li>
@@ -24,7 +38,14 @@
 
     <div id="popup">
       <p>Login</p>
-      <button onclick="hidePopup()">Close</button>
+      <form>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <button type="button" onclick="hidePopup()">Close</button>
+        <button type="submit">Login</button>
+      </form>
     </div>
 
     <script src="/scripts/final.js" rel="scripts"></script>

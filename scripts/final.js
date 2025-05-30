@@ -34,10 +34,85 @@ function resetBrightness(newBrightness){
     elem.style.filter = `brightness(${brightness})`;
 
 }
+
+// Store logged-in user
+let loggedInUser = null;
+let highestTime = 0; // in milliseconds
+
 function showPopup() {
     document.getElementById('popup').style.display = 'block';
 }
 function hidePopup() {
     document.getElementById('popup').style.display = 'none';
 }
+
+// Display the logged-in user and their highest time under the leaderboard
+function updateLeaderboardUser() {
+    const userDiv = document.getElementById('leaderboard-user');
+    const tableBody = document.querySelector('#leaderboard-table tbody');
+    if (userDiv) {
+        if (loggedInUser) {
+            const time = new Date(highestTime).toISOString().substr(11, 8);
+            userDiv.textContent = `Logged in as: ${loggedInUser} | Highest Time: ${time}`;
+            // Update table
+            if (tableBody) {
+                tableBody.innerHTML = `
+                  <tr>
+                    <td>${loggedInUser}</td>
+                    <td>${time}</td>
+                  </tr>
+                `;
+            }
+        } else {
+            userDiv.textContent = '';
+            if (tableBody) tableBody.innerHTML = '';
+        }
+    }
+}
+
+// Update highest time if current session is greater
+function updateHighestTime() {
+    if (!stopwatchStartTime) return;
+    const now = Date.now();
+    const elapsed = now - stopwatchStartTime;
+    if (elapsed > highestTime) {
+        highestTime = elapsed;
+        updateLeaderboardUser();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Show popup immediately when the page loads
+    showPopup();
+
+    const popupForm = document.querySelector('#popup form');
+    if (popupForm) {
+        popupForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            loggedInUser = username;
+            highestTime = 0; // Reset for new user
+            hidePopup();
+            updateLeaderboardUser();
+        });
+    }
+    updateLeaderboardUser(); // Show on page load if already set
+});
+
+// Example: function to check if user is logged in
+function isUserLoggedIn() {
+    return loggedInUser !== null;
+}
+
+// Stop the stopwatch and update highest time when needed
+function stopStopwatch() {
+    if (stopwatchInterval) {
+        clearInterval(stopwatchInterval);
+        stopwatchInterval = null;
+        updateHighestTime();
+    }
+}
+
+// Optionally, call stopStopwatch() when you want to stop timing
+// For example, you could add a "Stop" button and call stopStopwatch() on click
 
