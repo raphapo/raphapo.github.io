@@ -34,7 +34,7 @@
         <li>Improves your will to live</li>
         <li>Improves your ability to wait</li>
     </ul>
-    <button onclick="showPopup()">Show Popup</button>
+    <button onclick="showPopup()">Login/Sign Up</button>
 
     <div id="popup">
       <p>Login</p>
@@ -48,7 +48,29 @@
         <button type="submit">Login</button>
       </form>
     </div>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCg5X9V0U0wk-XnPcBVOzBvi0KJuFI_5tE",
+    authDomain: "concrete-drying-simulator.firebaseapp.com",
+    projectId: "concrete-drying-simulator",
+    storageBucket: "concrete-drying-simulator.firebasestorage.app",
+    messagingSenderId: "119467077408",
+    appId: "1:119467077408:web:62197c395e36db01087145",
+    measurementId: "G-6L4S44CJ9R"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
     <script src="/scripts/final.js" rel="scripts"></script>
 </body>
 </html>

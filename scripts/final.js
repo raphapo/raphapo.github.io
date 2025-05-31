@@ -46,10 +46,12 @@ function hidePopup() {
     document.getElementById('popup').style.display = 'none';
 }
 
-// Helper to get users array from localStorage
-function getUsers() {
-    const users = localStorage.getItem('users');
-    return users ? JSON.parse(users) : [];
+// Helper to get users array from Firestore leaderboard collection
+async function getUsers() {
+    // Assumes Firebase has already been initialized elsewhere in your project
+    const db = firebase.firestore();
+    const snapshot = await db.collection('leaderboard').get();
+    return snapshot.docs.map(doc => doc.data());
 }
 
 // Helper to save users array to localStorage
@@ -68,10 +70,10 @@ function loginUser(username, password) {
         saveUsers(users);
     } else {
         // Existing user: check password
-        if (user.password !== password) {
+  //      if (user.password !== password) {
             // Don't use alert, just return false
-            return false;
-        }
+    //        return false;
+  //      }
     }
     loggedInUser = username;
     highestTime = user.highestTime;
