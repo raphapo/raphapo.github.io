@@ -57,18 +57,26 @@ function saveUsers(users) {
     localStorage.setItem('users', JSON.stringify(users));
 }
 
-// Login user function
-function loginUser(username) {
+// Login user function (now with password support)
+function loginUser(username, password) {
     let users = getUsers();
     let user = users.find(u => u.username === username);
     if (!user) {
-        user = { username, highestTime: 0 };
+        // New user: save with password
+        user = { username, password, highestTime: 0 };
         users.push(user);
         saveUsers(users);
+    } else {
+        // Existing user: check password
+        if (user.password !== password) {
+            // Don't use alert, just return false
+            return false;
+        }
     }
     loggedInUser = username;
     highestTime = user.highestTime;
     updateLeaderboardUser();
+    return true;
 }
 
 // Display the logged-in user and their highest time under the leaderboard
@@ -129,14 +137,28 @@ function isUserLoggedIn() {
 document.addEventListener('DOMContentLoaded', function() {
     showPopup();
 
+    const errorMsg = document.getElementById('login-error');
     const popupForm = document.querySelector('#popup form');
     if (popupForm) {
         popupForm.addEventListener('submit', function(event) {
             event.preventDefault();
-            const username = document.getElementById('username').value;
-            if (!username.trim()) return alert("Please enter a username.");
-            loginUser(username);
-            hidePopup();
+            errorMsg.textContent = ""; // Clear previous error
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+            if (!username) {
+                errorMsg.textContent = "Please enter a username.";
+                return;
+            }
+            if (!password) {
+                errorMsg.textContent = "Please enter a password.";
+                return;
+            }
+            // Try to login, only hide popup if successful
+            if (loginUser(username, password)) {
+                hidePopup();
+            } else {
+                errorMsg.textContent = "Password incorrect";
+            }
         });
     }
     updateLeaderboardUser();
