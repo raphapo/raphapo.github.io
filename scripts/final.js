@@ -70,10 +70,10 @@ function loginUser(username, password) {
         saveUsers(users);
     } else {
         // Existing user: check password
-  //      if (user.password !== password) {
-            // Don't use alert, just return false
-    //        return false;
-  //      }
+        //      if (user.password !== password) {
+        // Don't use alert, just return false
+        //        return false;
+        //      }
     }
     loggedInUser = username;
     highestTime = user.highestTime;
@@ -136,13 +136,13 @@ function isUserLoggedIn() {
     return loggedInUser !== null;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     showPopup();
 
     const errorMsg = document.getElementById('login-error');
     const popupForm = document.querySelector('#popup form');
     if (popupForm) {
-        popupForm.addEventListener('submit', function(event) {
+        popupForm.addEventListener('submit', function (event) {
             event.preventDefault();
             errorMsg.textContent = ""; // Clear previous error
             const username = document.getElementById('username').value.trim();
@@ -166,3 +166,39 @@ document.addEventListener('DOMContentLoaded', function() {
     updateLeaderboardUser();
 });
 
+function getLeaderboardAsJson(callback) {
+    db.collection("leaderboard")
+        .get()
+        .then(function (snapshot) {
+            var leaderboard = {};
+            snapshot.forEach(function (doc) {
+                leaderboard[doc.id] = doc.data();
+            });
+            callback(leaderboard);
+        });
+}
+
+function setLeaderboardScore(username, score, callback) {
+    db.collection("leaderboard")
+        .doc(username)
+        .set({ score: score })
+        .then(function () {
+            if (callback) callback();
+        })
+        .catch(function (error) {
+            console.error("Error writing document: ", error);
+            if (callback) callback(error);
+        });
+}
+
+// Usage example:
+setLeaderboardScore("toto", 45, function (error) {
+    if (error) {
+        console.log("Failed to write score!");
+        return;
+    }
+    console.log("Score saved!");
+    getLeaderboardAsJson(function (leaderboard) {
+        console.log(leaderboard);
+    });
+});
