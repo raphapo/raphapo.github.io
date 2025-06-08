@@ -46,14 +46,6 @@ function hidePopup() {
     document.getElementById('popup').style.display = 'none';
 }
 
-// Helper to get users array from Firestore leaderboard collection
-async function getUsers() {
-    // Assumes Firebase has already been initialized elsewhere in your project
-    const db = firebase.firestore();
-    const snapshot = await db.collection('leaderboard').get();
-    return snapshot.docs.map(doc => doc.data());
-}
-
 // Helper to save users array to localStorage
 function saveUsers(users) {
     localStorage.setItem('users', JSON.stringify(users));
@@ -61,23 +53,15 @@ function saveUsers(users) {
 
 // Login user function (now with password support)
 function loginUser(username, password) {
-    let users = getUsers();
-    let user = users.find(u => u.username === username);
-    if (!user) {
-        // New user: save with password
-        user = { username, password, highestTime: 0 };
-        users.push(user);
-        saveUsers(users);
-    } else {
-        // Existing user: check password
-        //      if (user.password !== password) {
-        // Don't use alert, just return false
-        //        return false;
-        //      }
-    }
+    // TODO: auth the user
     loggedInUser = username;
-    highestTime = user.highestTime;
-    updateLeaderboardUser();
+    setLeaderboardScore(username, highestTime, function (error) {
+        if (error) {
+            alert("Failed to write score!");
+            return false;
+        }
+        updateLeaderboardUser();
+    });
     return true;
 }
 
@@ -94,13 +78,14 @@ function updateLeaderboardUser() {
     }
     // Show all users in the table, sorted by highest time
     if (tableBody) {
-        const users = getUsers().sort((a, b) => b.highestTime - a.highestTime);
-        tableBody.innerHTML = users.map(u => `
+        getLeaderboardAsJson(function (leaderboard) {
+            tableBody.innerHTML = Object.entries(leaderboard).sort((a, b) => b[1].score - a[1].score).map(([username, data]) => (`
             <tr>
-                <td>${u.username}</td>
-                <td>${new Date(u.highestTime).toISOString().substr(11, 8)}</td>
+                <td>${username}</td>
+                <td>${new Date(data.score).toISOString().substr(11, 8)}</td>
             </tr>
-        `).join('');
+        `)).join('');
+        });
     }
 }
 
@@ -111,14 +96,14 @@ function updateHighestTime() {
     const elapsed = now - stopwatchStartTime;
     if (elapsed > highestTime) {
         highestTime = elapsed;
-        // Update user in users array
-        let users = getUsers();
-        let user = users.find(u => u.username === loggedInUser);
-        if (user) {
-            user.highestTime = highestTime;
-            saveUsers(users);
-        }
-        updateLeaderboardUser();
+
+        setLeaderboardScore(loggedInUser, highestTime, function (error) {
+            if (error) {
+                alert("Failed to write score!");
+                return;
+            }
+            updateLeaderboardUser();
+        });
     }
 }
 
@@ -192,7 +177,7 @@ function setLeaderboardScore(username, score, callback) {
 }
 
 // Usage example:
-setLeaderboardScore("toto", 45, function (error) {
+setLeaderboardScore("toto", 48, function (error) {
     if (error) {
         console.log("Failed to write score!");
         return;
