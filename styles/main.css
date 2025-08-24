@@ -415,8 +415,12 @@ main {
   margin-bottom: 3rem;
 }
 
+/* Center all h2 elements */
+h2 {
+  text-align: center;
+}
+
 .portfolio-gallery h2 {
-  text-align: left;
   font-size: 2rem;
   margin-bottom: 1.2rem;
   color: var(--primary);

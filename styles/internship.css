@@ -1,0 +1,185 @@
+.nyt-article .nyt-article-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.6s cubic-bezier(.4,0,.2,1), opacity 0.4s cubic-bezier(.4,0,.2,1);
+}
+.nyt-article.expanded .nyt-article-content {
+  max-height: 4000px;
+  opacity: 1;
+  transition: max-height 1s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);
+}
+.nyt-article-header {
+  background: url('/images/internship.jpg') center center/cover no-repeat;
+  position: relative;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+.nyt-article-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30,40,60,0.45);
+  z-index: 0;
+}
+.nyt-article-header > * {
+  position: relative;
+  z-index: 1;
+}
+.nyt-title, .nyt-byline {
+  color: #fff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.internship-card ul {
+  text-align: left;
+  margin-left: 1.2em;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(.4,0,.2,1), opacity 0.3s cubic-bezier(.4,0,.2,1);
+  padding-bottom: 0.2em;
+}
+.internship-card li {
+  text-align: left;
+}
+.internship-card:hover ul {
+  max-height: 500px;
+  opacity: 1;
+  transition: max-height 0.5s cubic-bezier(.4,0,.2,1), opacity 0.3s cubic-bezier(.4,0,.2,1);
+}
+.internship-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1em;
+  margin: 1.1em 0 2em 0;
+}
+.internship-card {
+  background: linear-gradient(120deg, #e3f2fd 70%, #fff 100%);
+  border-left: 4px solid #1565c0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(44,62,80,0.07);
+  padding: 1em 1.2em;
+  font-size: 1.07em;
+  color: #232f34;
+  flex: 1 1 320px;
+  min-width: 220px;
+  max-width: 100%;
+  margin: 0;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.internship-card:hover {
+  box-shadow: 0 6px 24px rgba(21,101,192,0.13);
+  transform: translateY(-4px) scale(1.03);
+  background: linear-gradient(120deg, #bbdefb 80%, #fff 100%);
+}
+/* NYT Article Style */
+.nyt-article {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  background: #fff;
+  max-width: 700px;
+  margin: 3rem auto 3rem auto;
+  padding: 2.5rem 2.2rem 2.5rem 2.2rem;
+  border-radius: 10px;
+  color: #222;
+  line-height: 1.7;
+}
+.nyt-article-header {
+  border-bottom: 1.5px solid #e0e0e0;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.7rem;
+}
+.nyt-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.3em 0;
+  letter-spacing: 0.5px;
+  color: #111;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+.nyt-byline {
+  font-size: 1.1rem;
+  color: #888;
+  margin: 0;
+}
+.nyt-hero-image {
+  margin: 2.2rem 0 1.2rem 0;
+  text-align: center;
+}
+.nyt-hero-image img {
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+}
+.nyt-caption {
+  font-size: 0.98rem;
+  color: #888;
+  margin-top: 0.5em;
+  font-style: italic;
+}
+.nyt-lead {
+  font-size: 1.25rem;
+  color: #232f34;
+  margin-bottom: 1.5em;
+}
+.nyt-section {
+  margin-bottom: 2.2em;
+}
+.nyt-section h2 {
+  font-size: 1.35rem;
+  color: #1565c0;
+  margin-bottom: 0.7em;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+.nyt-article-footer {
+  border-top: 1.5px solid #e0e0e0;
+  margin-top: 2.5rem;
+  padding-top: 1.2rem;
+}
+/* Improved h3 style for article sections */
+.nyt-section h3 {
+  font-size: 1.30rem;
+  color: #444;
+  font-weight: 500;
+  margin-top: 2.2em;
+  margin-bottom: 0.7em;
+  padding-left: 0.7em;
+  letter-spacing: 0.2px;
+}
+
+.nyt-section ul {
+  margin: 0.5em 0 1.2em 2em;
+  font-size: 1.08em;
+  padding-left: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.internship-card ul, .internship-card li {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.nyt-section p {
+  color: #232f34;
+  font-size: 1.13em;
+  margin-bottom: 1.2em;
+  text-align: left;
+}
+.nyt-article-header p, .nyt-article-header .nyt-byline {
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  .nyt-article {
+    padding: 1.2rem 0.5rem;
+  }
+  .nyt-title {
+    font-size: 2rem;
+  }
+  .nyt-section h3 {
+    font-size: 1.30rem;
+    padding-left: 0.4em;
+  }
+}
