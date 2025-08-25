@@ -8,14 +8,13 @@
   <script defer src="/scripts/internship.js"></script>
   <script defer>
     document.addEventListener('DOMContentLoaded', function() {
-      const header = document.querySelector('.nyt-article-header');
-      const article = document.querySelector('.nyt-article');
-      if (header && article) {
+      document.querySelectorAll('.nyt-article-header').forEach(function(header) {
         header.style.cursor = 'pointer';
         header.addEventListener('click', function() {
-          article.classList.toggle('expanded');
+          const article = header.closest('.nyt-article');
+          if (article) article.classList.toggle('expanded');
         });
-      }
+      });
     });
   </script>
 </head>
@@ -141,6 +140,91 @@
       </footer>
       </div>
     </article>
+  <article class="nyt-article" style="margin-top:3em;">
+    <header class="nyt-article-header" style="background:url('/images/dnm_internship.jpg') center center/cover no-repeat;">
+      <h1 class="nyt-title">August 2025 &mdash; DNM Architecture, Sausalito, CA</h1>
+    </header>
+    <div class="nyt-article-content">
+      <section class="nyt-section">
+        <div class="internship-cards">
+          <div class="internship-card">
+            <h3>About DNM Architecture</h3>
+            <ul>
+              <li>Founded in 1999 by architect David Marlatt, based in Sausalito, CA</li>
+              <li>Specializes in LEED and Green Point Rated homes, sustainable and energy-efficient design</li>
+              <li>David Marlatt's background in architectural software (Abvent SA, Graphisoft US, Inc.)</li>
+              <li>Projects include custom homes, remodels, educational, commercial, and institutional buildings</li>
+              <li>Firm is known as "advocates for the building"</li>
+            </ul>
+          </div>
+          <div class="internship-card">
+            <h3>Overview</h3>
+            <ul>
+              <li>Comprehensive exposure to professional architectural practice</li>
+              <li>Hands-on construction site visits and advanced BIM software training</li>
+              <li>Complemented previous experience with field and digital work</li>
+            </ul>
+          </div>
+          <div class="internship-card">
+            <h3>Primary Project and Software Training</h3>
+            <ul>
+              <li>Focused on learning ArchiCAD, a new BIM software</li>
+              <li>Expanded digital design toolkit beyond Revit</li>
+              <li>Gained exposure to unique workflows and capabilities of ArchiCAD</li>
+            </ul>
+          </div>
+          <div class="internship-card">
+            <h3>Field Experience - Construction Site Visits</h3>
+            <ul>
+              <li><strong>San Francisco Mission District Site:</strong> Learned about construction in dense urban settings, logistics, and integration with infrastructure</li>
+              <li><strong>Belvedere Hilltop Site:</strong> Saw how design responds to dramatic natural settings and landscape context</li>
+            </ul>
+          </div>
+          <div class="internship-card">
+            <h3>Technical Skills Developed</h3>
+            <ul>
+              <li><strong>ArchiCAD Proficiency:</strong>
+                <ul>
+                  <li>BIM Methodology: Learned ArchiCAD's approach to BIM and its unique workflow</li>
+                  <li>3D Modeling: Developed skills with ArchiCAD's tools and parametric objects</li>
+                  <li>Documentation Integration: Coordinated 2D and 3D modeling</li>
+                  <li>Software Transition: Adapted BIM knowledge to a new platform</li>
+                </ul>
+              </li>
+              <li><strong>Construction Site Analysis:</strong>
+                <ul>
+                  <li>Design-to-Reality: Observed translation of drawings/models to construction</li>
+                  <li>Material Implementation: Saw real-world application of materials and details</li>
+                  <li>Construction Sequencing: Understood project progress from foundation to completion</li>
+                  <li>Problem-Solving: Watched teams adapt to field challenges</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="internship-card">
+            <h3>Learning Outcomes and Professional Insights</h3>
+            <ul>
+              <li>Expanded understanding of architecture beyond digital design</li>
+              <li>Combined software learning with active construction site experience</li>
+              <li>Learned importance of constructability, material behavior, and site conditions</li>
+              <li>Gained insight into sustainable design in practice and digital innovation</li>
+            </ul>
+          </div>
+          <div class="internship-card">
+            <h3>Conclusion</h3>
+            <ul>
+              <li><strong>Professional Development:</strong> Bridged gap between digital design and construction, learned ArchiCAD, and saw architecture in the real world</li>
+              <li><strong>Personal Growth:</strong> Field experiences showed the collaborative nature of construction and the importance of context in design</li>
+              <li>Confirmed that successful architecture requires both technical and practical understanding</li>
+            </ul>
+          </div>
+          <div class="internship-card" style="min-height:180px;display:flex;align-items:center;justify-content:center;background:#f7f7f7;border:2px dashed #bbb;">
+            <span style="color:#888;font-size:1.1em;">[Insert DNM Internship Image Here]</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </article>
   </main>
   <footer>
     <p>&copy; 2025 Raphael's Architecture Portfolio</p>
