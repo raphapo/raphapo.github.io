@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sustainable House | Raphael's Architecture Portfolio</title>
   <link href="/styles/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/project.css">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="preload" as="image" href="/images/project1.jpg">
+  <!-- Preload gallery images for faster display -->
+  <link rel="preload" as="image" href="/images/project1_frontview.jpg">
+  <link rel="preload" as="image" href="/images/project1_sideview.jpg">
+  <link rel="preload" as="image" href="/images/project1_topview.jpg">
+  <link rel="preload" as="image" href="/images/project1_floorplan.jpg">
 </head>
 <body>
   <header>
@@ -28,11 +35,12 @@
   </header>
   <main>
     <section class="about-section">
-      <img src="/images/project1.jpg" alt="Sustainable House Design" style="width:100%;max-width:600px;border-radius:10px;box-shadow:0 2px 12px rgba(44,62,80,0.10);margin-bottom:2rem;">
+  <img src="/images/project1.jpg" alt="Sustainable House Design" loading="lazy" style="width:100%;max-width:600px;border-radius:10px;box-shadow:0 2px 12px rgba(44,62,80,0.10);margin-bottom:2rem;">
       <h2>Project Overview</h2>
       <p>
         The Sustainable House project explores contemporary residential architecture with a focus on sustainability, open living spaces, and integration with the natural environment. The design uses eco-friendly materials and maximizes natural light, creating a comfortable and energy-efficient home.
       </p>
+      <div class="project-card">
       <h2>Key Features</h2>
       <ul>
         <li>Open-plan living and dining areas</li>
@@ -41,9 +49,37 @@
         <li>Minimalist interior with natural materials</li>
         <li>Seamless indoor-outdoor connection</li>
       </ul>
-      <h2>Gallery</h2>
-      <img src="/images/project1_interior.jpg" alt="Sustainable House Interior" style="width:100%;max-width:500px;border-radius:8px;margin-bottom:1rem;">
-      <img src="/images/project1_sketch.jpg" alt="Sustainable House Sketch" style="width:100%;max-width:500px;border-radius:8px;">
+      </div>
+      <div class="project-card">
+        <h2 id="gallery-toggle" style="cursor:pointer;user-select:none;">Gallery <span id="gallery-arrow">&#9654;</span></h2>
+        <div id="gallery-section" style="display:none;">
+          <div class="gallery-carousel" style="position:relative;max-width:500px;margin:auto;">
+            <button class="carousel-arrow left" style="position:absolute;left:0;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.7);border:none;font-size:2em;cursor:pointer;z-index:2;">&#8592;</button>
+            <img id="carousel-image" src="/images/project1_frontview.jpg" alt="Sustainable House Front View" loading="eager" style="width:100%;max-width:500px;border-radius:8px;box-shadow:0 2px 12px rgba(44,62,80,0.10);">
+            <div id="carousel-caption" style="text-align:center;font-size:1.05em;color:#555;margin-top:0.5em;">Sustainable House Front View</div>
+            <button class="carousel-arrow right" style="position:absolute;right:0;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.7);border:none;font-size:2em;cursor:pointer;z-index:2;">&#8594;</button>
+          </div>
+        </div>
+       
+      <script src="/scripts/gallery-carousel.js"></script>
+      <script>
+        initGalleryCarousel({
+          images: [
+            {src: '/images/project1_frontview.jpg', alt: 'Sustainable House Front View'},
+            {src: '/images/project1_sideview.jpg', alt: 'Sustainable House Side View'},
+            {src: '/images/project1_topview.jpg', alt: 'Sustainable House Top View'},
+            {src: '/images/project1_floorplan.jpg', alt: 'Sustainable House Floor Plan'}
+          ],
+          imgSelector: '#carousel-image',
+          captionSelector: '#carousel-caption',
+          leftBtnSelector: '.carousel-arrow.left',
+          rightBtnSelector: '.carousel-arrow.right',
+          toggleSelector: '#gallery-toggle',
+          sectionSelector: '#gallery-section',
+          arrowSelector: '#gallery-arrow'
+        });
+      </script>
+      </div>
     </section>
   </main>
   <footer>

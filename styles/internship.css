@@ -16,6 +16,15 @@
   border-radius: 10px 10px 0 0;
   overflow: hidden;
 }
+
+/* DNM internship header uses a different image, same style */
+.dnm-header {
+  background: url('/images/dnm_internship.jpg') center center/cover no-repeat;
+  position:relative;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
 .nyt-article-header::before {
   content: '';
   position: absolute;
@@ -27,6 +36,7 @@
   position: relative;
   z-index: 1;
 }
+
 .nyt-title, .nyt-byline {
   color: #fff !important;
   text-shadow: 0 2px 8px rgba(0,0,0,0.18);

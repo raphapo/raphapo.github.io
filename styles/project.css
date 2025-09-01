@@ -1,0 +1,38 @@
+/* Project Card List Styles (copied from internship-card ul and li) */
+.project-card ul {
+  text-align: left;
+  margin-left: 1.2em;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(.4,0,.2,1), opacity 0.3s cubic-bezier(.4,0,.2,1);
+  padding-bottom: 0.2em;
+}
+.project-card li {
+  text-align: left;
+}
+.project-card:hover ul {
+  max-height: 500px;
+  opacity: 1;
+  transition: max-height 0.5s cubic-bezier(.4,0,.2,1), opacity 0.3s cubic-bezier(.4,0,.2,1);
+}
+/* Project Card Styles (copied from internship-card) */
+.project-card {
+  background: linear-gradient(120deg, #e3f2fd 70%, #fff 100%);
+  border-left: 4px solid #1565c0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(44,62,80,0.07);
+  padding: 1em 1.2em;
+  font-size: 1.07em;
+  color: #232f34;
+  flex: 1 1 320px;
+  min-width: 220px;
+  max-width: 100%;
+  margin: 0;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.project-card:hover {
+  box-shadow: 0 6px 24px rgba(21,101,192,0.13);
+  transform: translateY(-4px) scale(1.03);
+  background: linear-gradient(120deg, #bbdefb 80%, #fff 100%);
+}

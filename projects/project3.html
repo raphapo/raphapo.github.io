@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Community Relief Center | Raphael's Architecture Portfolio</title>
   <link href="/styles/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/project.css">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="preload" as="image" href="/images/project3.jpg">
 </head>
 <body>
   <header>
@@ -32,6 +34,7 @@
       <p>
         The Community Relief Center is designed to provide essential services and support to residents during emergencies and throughout the year. The center emphasizes resilience, accessibility, and flexibility, ensuring it can adapt to a variety of community needs. Its welcoming design fosters a sense of safety and belonging for all visitors.
       </p>
+      <div class="project-card">
       <h2>Key Features</h2>
       <ul>
         <li>Multi-purpose spaces for shelter, food distribution, and medical aid</li>
@@ -40,14 +43,36 @@
         <li>Outdoor gathering areas and green spaces</li>
         <li>Flexible layout to accommodate different types of emergencies and events</li>
       </ul>
-      <h2>Gallery: Sketches & Pictures</h2>
-      <div class="gallery-row">
-        <!-- Add your sketches and pictures below. Example: -->
-        <img src="/images/project3_sketch1.jpg" alt="Community Relief Center Sketch 1" style="width:100%;max-width:300px;border-radius:8px;margin:1rem;">
-        <img src="/images/project3_sketch2.jpg" alt="Community Relief Center Sketch 2" style="width:100%;max-width:300px;border-radius:8px;margin:1rem;">
-        <img src="/images/project3_photo1.jpg" alt="Community Relief Center Photo 1" style="width:100%;max-width:300px;border-radius:8px;margin:1rem;">
-        <!-- You can add more images as needed -->
       </div>
+
+      <div class="project-card">
+      <h2 id="gallery-toggle" style="cursor:pointer;user-select:none;">Gallery: Sketches & Pictures <span id="gallery-arrow">&#9654;</span></h2>
+        <div id="gallery-section" style="display:none;">
+          <div class="gallery-carousel" style="position:relative;max-width:500px;margin:auto;">
+            <button class="carousel-arrow left" style="position:absolute;left:0;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.7);border:none;font-size:2em;cursor:pointer;z-index:2;">&#8592;</button>
+            <img id="carousel-image" src="/images/project3_sketch1.jpg" alt="Community Relief Center Sketch 1" loading="eager" style="width:100%;max-width:500px;border-radius:8px;box-shadow:0 2px 12px rgba(44,62,80,0.10);">
+            <div id="carousel-caption" style="text-align:center;font-size:1.05em;color:#555;margin-top:0.5em;">Community Relief Center Sketch 1</div>
+            <button class="carousel-arrow right" style="position:absolute;right:0;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.7);border:none;font-size:2em;cursor:pointer;z-index:2;">&#8594;</button>
+          </div>
+        </div>
+      </div>
+      <script src="/scripts/gallery-carousel.js"></script>
+      <script>
+        initGalleryCarousel({
+          images: [
+            {src: '/images/project3_sketch1.jpg', alt: 'Community Relief Center Sketch 1'},
+            {src: '/images/project3_sketch2.jpg', alt: 'Community Relief Center Sketch 2'},
+            {src: '/images/project3_photo1.jpg', alt: 'Community Relief Center Photo 1'}
+          ],
+          imgSelector: '#carousel-image',
+          captionSelector: '#carousel-caption',
+          leftBtnSelector: '.carousel-arrow.left',
+          rightBtnSelector: '.carousel-arrow.right',
+          toggleSelector: '#gallery-toggle',
+          sectionSelector: '#gallery-section',
+          arrowSelector: '#gallery-arrow'
+        });
+      </script>
     </section>
   </main>
   <footer>

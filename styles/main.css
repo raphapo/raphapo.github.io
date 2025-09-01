@@ -71,11 +71,6 @@ h1:hover {
     ;
 }
 
-ul {
-    border: 5px solid black;
-    padding: 1em;
-}
-
 a:link{
     color: goldenrod;
     text-decoration: none;
